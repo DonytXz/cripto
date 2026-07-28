@@ -6,7 +6,7 @@
 @import '_functions.scss';
 @import '_variables.scss';
 @import '_variables-dark.scss';
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'bootstrap/scss/bootstrap';
 @import '_mixins.scss';
 
 @import '_root.scss';
@@ -20,4 +20,3 @@
 @import '_pages.scss';
 @import '_widgets.scss';
 @import '_rtl.scss';
-

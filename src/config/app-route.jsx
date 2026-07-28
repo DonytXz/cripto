@@ -1,11 +1,10 @@
 import React from "react";
 import App from "./../app.jsx";
-import { Navigate } from "react-router-dom";
+import { Navigate } from "react-router";
 
-import PagesError from "./../pages/pages/error.js";
-import PagesLogin from "./../pages/pages/login.js";
-import PagesRegister from "./../pages/pages/register.js";
-import Home from "./../pages/home/home.js";
+import PagesError from "./../pages/pages/error.jsx";
+import PagesLogin from "./../pages/pages/login.jsx";
+import Home from "./../pages/home/home.jsx";
 
 const AppRoute = [
   {

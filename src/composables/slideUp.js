@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 export function slideUp(elm, duration = 300) {
 	if (!elm.classList.contains('transitioning')) {
 		elm.classList.add('transitioning');

@@ -3,7 +3,6 @@ import Chart from "chart.js/auto";
 import moment from "moment";
 
 function LineChart({ data }) {
-  console.log(data, "data on chart");
   let predictions = [];
   let times = [];
   moment.locale("es");
@@ -50,8 +49,6 @@ function LineChart({ data }) {
     return () => {
       myChart.destroy();
     };
-
-    // eslint-disable-next-line
   }, []);
 
   return (

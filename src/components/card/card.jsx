@@ -57,7 +57,7 @@ function CardGroup(props) {
 };
 
 
-function CardExpandToggler(props) {
+function CardExpandToggler() {
 	const tooltipRef = React.createRef();
 	
 	useEffect(() => {

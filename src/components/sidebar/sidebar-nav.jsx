@@ -1,8 +1,8 @@
 import React from 'react';
-import { useResolvedPath, useMatch, NavLink, useLocation, matchPath } from 'react-router-dom';
+import { useResolvedPath, useMatch, NavLink, useLocation, matchPath } from 'react-router';
 import menus from './../../config/app-menu.jsx';
 
-function NavItem({ menu, ...props }: LinkProps) {
+function NavItem({ menu, ...props }) {
 	let path = (menu.path) ? menu.path : '';
 	let resolved = useResolvedPath(path);
   let match = useMatch({ path: resolved.pathname });

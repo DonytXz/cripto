@@ -1,11 +1,10 @@
-import React, { useEffect, useContext, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import React, { useEffect, useContext } from "react";
+import { Link } from "react-router";
 import { AppSettings } from "./../../config/app-settings.js";
 import logo from "../../assets/img/whiteLogo.png";
 
 function PagesRegister() {
   const context = useContext(AppSettings);
-  const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
     context.setAppHeaderNone(true);
@@ -17,18 +16,10 @@ function PagesRegister() {
       context.setAppSidebarNone(false);
       context.setAppContentClass("");
     };
-
-    // eslint-disable-next-line
   }, []);
 
   function handleSubmit(event) {
-    // event.preventDefault();
-
-    // setRedirect(true);
-  }
-
-  if (redirect) {
-    return <Navigate to="/" />;
+    event.preventDefault();
   }
   return (
     <div className="register">

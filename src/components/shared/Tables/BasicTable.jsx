@@ -1,7 +1,6 @@
 import React from "react";
 
 const BasicTable = ({ data }) => {
-  // console.log(data, "data on table");
   return (
     <>
       <table className="table">
@@ -14,7 +13,6 @@ const BasicTable = ({ data }) => {
         </thead>
         <tbody>
           {data.map((element, index) => {
-              // console.log(element, "element talbe");
             return (
               <tr key={index+1}>
                 <th scope="row">{index}</th>

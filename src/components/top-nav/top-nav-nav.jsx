@@ -1,8 +1,8 @@
 import React from 'react';
-import { useResolvedPath, useMatch, NavLink, useLocation, matchPath } from 'react-router-dom';
+import { useResolvedPath, useMatch, NavLink, useLocation, matchPath } from 'react-router';
 import menus from './../../config/app-menu.jsx';
 
-function NavItem({ menu, ...props }: LinkProps) {
+function NavItem({ menu, ...props }) {
 	let path = (menu.path) ? menu.path : '';
 	let resolved = useResolvedPath(path);
   let match = useMatch({ path: resolved.pathname });
@@ -49,7 +49,7 @@ function TopNavNav() {
 		var marginLeft = parseInt(objStyle.getPropertyValue(targetCss));  
 		var containerWidth = document.querySelector('.app-top-nav').clientWidth - document.querySelector('.app-top-nav').clientHeight * 2;
 		var totalWidth = 0;
-		var finalScrollWidth = 0;
+		var finalScrollWidth;
 		var controlPrevObj = obj.querySelector('.menu-control-start');
 		var controlPrevWidth = (controlPrevObj) ? controlPrevObj.clientWidth : 0;
 		var controlNextObj = obj.querySelector('.menu-control-end');
