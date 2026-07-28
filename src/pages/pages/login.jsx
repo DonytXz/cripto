@@ -33,7 +33,7 @@ function PagesLogin() {
   };
 
   if (redirect) {
-    return <Navigate to="/" />;
+    return <Navigate to="/home" replace />;
   }
   return (
     <div className="login">
@@ -102,6 +102,12 @@ function PagesLogin() {
           >
             Sign In
           </button>
+          <div className="text-center">
+            <Link to="/" className="text-inverse text-opacity-50">
+              <i className="bi bi-arrow-left me-2" aria-hidden="true" />
+              Back to market
+            </Link>
+          </div>
           {/* <div className="text-center text-inverse text-opacity-50">
             Don't have an account yet? <Link to="/pages/register">Sign up</Link>
             .
