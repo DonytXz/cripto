@@ -113,8 +113,6 @@ function App() {
 		return function cleanUp() {
     	window.removeEventListener('scroll', handleScroll)
 		};
-		
-		// eslint-disable-next-line
   }, []);
   
   var handleScroll = () => {

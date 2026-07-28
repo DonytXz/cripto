@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router';
 import { Card, CardBody } from './../../components/card/card.jsx';
 import { AppSettings } from './../../config/app-settings.js';
 
@@ -21,9 +21,7 @@ function PagesError() {
 			context.setAppSidebarNone(false);
 			context.setAppContentClass('');
 		};
-		
-		// eslint-disable-next-line
-	}, []);
+		}, []);
 
 	return (
 		<div className="error-page">

@@ -1,9 +1,8 @@
 import React, { useEffect, useContext, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router";
 import { AppSettings } from "./../../config/app-settings.js";
 import logo from "../../assets/img/whiteLogo.png";
 import { login } from "../../services/Auth.js";
-import { event } from "jquery";
 
 function PagesLogin() {
   const context = useContext(AppSettings);
@@ -21,14 +20,11 @@ function PagesLogin() {
       context.setAppSidebarNone(false);
       context.setAppContentClass("");
     };
-
-    // eslint-disable-next-line
   }, []);
 
   const postData = async (event) => {
     event.preventDefault();
     const response = await login({ username: email, password: password });
-    console.log(response, "response login");
     if (response) {
       localStorage.setItem("token", response?.data?.token);
       localStorage.setItem("id", response?.data?.id);

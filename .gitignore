@@ -9,6 +9,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -27,5 +28,4 @@ yarn-error.log*
 
 node_modules
 **/node_modules
-
 
