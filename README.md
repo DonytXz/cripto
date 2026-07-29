@@ -24,8 +24,10 @@ The browser-facing API base URLs use Vite's `VITE_` prefix:
 ```dotenv
 VITE_API_LOGIN=https://api.example.com/deepia
 VITE_API_DATA=https://data.example.com
+VITE_MARKET_API=https://api.coingecko.com/api/v3
 ```
 
+`VITE_MARKET_API` is optional and defaults to CoinGecko's keyless public API.
 These values are bundled into the client and must not contain secrets.
 
 ## Commands
@@ -35,5 +37,9 @@ These values are bundled into the client and must not contain secrets.
 - `npm run preview` previews the production bundle locally.
 - `npm run lint` checks the JavaScript and JSX source.
 
-Because this app uses `BrowserRouter`, production hosting must route unknown paths
-back to `index.html`.
+## GitHub Pages
+
+The app is configured for `https://donytxz.github.io/cripto/`. Pushes to
+`main` or `feature/public-crypto-market` run the Pages deployment workflow.
+The workflow adds a `404.html` fallback so client-side routes continue to work
+when opened directly.
